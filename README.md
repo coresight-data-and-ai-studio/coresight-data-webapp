@@ -1,4 +1,4 @@
-# CoreSight Data & AI Studio 🚀
+# CoreSight Data & AI Studio
 
 <p align="center">
   <img src="public/assets/coresight-logo.png" alt="CoreSight Data & AI Studio Logo" width="260"/>
@@ -10,7 +10,7 @@ We design and build **end-to-end data solutions** from raw data pipelines to int
 
 ---
 
-## 🌍 What We Do
+## What We Do
 
 At CoreSight, we bridge the gap between **data engineering**, **analytics**, and **business decision-making**.
 
@@ -38,7 +38,7 @@ Our core services include:
 
 ---
 
-## 🧠 Our Philosophy
+## Our Philosophy
 
 We believe:
 - **Good analytics should be understandable**, not intimidating  
