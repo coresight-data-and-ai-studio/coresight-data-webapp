@@ -1,20 +1,64 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CoreSight Data & AI Studio 🚀
 
-# Run and deploy your AI Studio app
+<p align="center">
+  <img src="public/assets/coresight-logo.png" alt="CoreSight Data & AI Studio Logo" width="260"/>
+</p>
 
-This contains everything you need to run your app locally.
+**CoreSight Data & AI Studio** is a Germany-based data analytics and AI consultancy focused on turning complex data into clear, actionable business insights.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Xn_t6FYDmvipg12LXo3eMhA8Lvb2S_cD
+We design and build **end-to-end data solutions** from raw data pipelines to interactive dashboards and AI-driven decision tools with a strong focus on clarity, performance, and real-world usability.
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🌍 What We Do
 
+At CoreSight, we bridge the gap between **data engineering**, **analytics**, and **business decision-making**.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Our core services include:
+
+- **Data Engineering**
+  - Data ingestion, cleaning, transformation (ETL/ELT)
+  - SQL and cloud-ready data pipelines
+  - Structured, reproducible data workflows
+
+- **Analytics & Dashboards**
+  - Interactive dashboards (Streamlit, web-based)
+  - KPI monitoring and reporting
+  - Exploratory and descriptive analytics
+
+- **Forecasting & Decision Support**
+  - Time-series forecasting
+  - Scenario analysis and trend exploration
+  - Data-driven planning support
+
+- **AI-Powered Solutions**
+  - Applied machine learning for real business problems
+  - Lightweight, explainable models
+  - Practical AI 
+
+---
+
+## 🧠 Our Philosophy
+
+We believe:
+- **Good analytics should be understandable**, not intimidating  
+- **AI should support decisions**, not replace human judgment  
+- **Simple, well-designed systems beat complex ones** in the long run  
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── components/        # Reusable UI components
+├── pages/             # Application pages
+├── public/
+│   └── assets/        # Images, icons, branding
+├── App.tsx            # Main app component
+├── index.tsx          # Application entry point
+├── index.html         # HTML template
+├── metadata.json      # App metadata
+├── types.ts           # Shared TypeScript types
+├── vite.config.ts     # Vite configuration
+├── tsconfig.json      # TypeScript config
+└── README.md          
