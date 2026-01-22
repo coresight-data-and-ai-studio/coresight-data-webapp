@@ -1,7 +1,7 @@
 # CoreSight Data & AI Studio
 
 <p align="center">
-  <img src="public/assets/coresight-logo.png" alt="CoreSight Data & AI Studio Logo" width="260"/>
+  <img src="public/assets/coresight-logo.png" alt="CoreSight Data & AI Studio Logo" width="320"/>
 </p>
 
 **CoreSight Data & AI Studio** is a Germany-based data analytics and AI consultancy focused on turning complex data into clear, actionable business insights.
