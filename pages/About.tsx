@@ -13,7 +13,7 @@ export const About: React.FC = () => {
       linkedin: "https://www.linkedin.com/in/nayeem-haider-82b390110/"
     },
     {
-      name: "Shaikat Saha",
+      name: "Mr. Shaikat Saha",
       role: "COO & Co-Founder",
       image: "assets/shaikat.jpg",
       bio: "Shaikat leads day-to-day operations, ensuring smooth project execution, efficient workflows, and timely delivery of high-quality solutions. He translates strategic goals into scalable processes, aligning teams and resources to drive consistent client value and operational excellence.",
