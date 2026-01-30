@@ -104,7 +104,7 @@ export const About: React.FC = () => {
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">The Problem We Solve</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Organizations are overwhelmed by data but lack actionable insights. We address the three biggest barriers to becoming truly data-driven.
+              Businesses are drowning in data but starving for insights. We tackle the three biggest barriers to data-driven success.
             </p>
           </div>
           
