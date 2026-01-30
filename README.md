@@ -54,6 +54,8 @@ We believe:
 ├── pages/             # Application pages
 ├── public/
 │   └── assets/        # Images, icons, branding
+├── functions/
+│   └── api/
 ├── App.tsx            # Main app component
 ├── index.tsx          # Application entry point
 ├── index.html         # HTML template
