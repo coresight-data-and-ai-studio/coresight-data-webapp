@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Check, Mail, Phone, MapPin, Send, Search, TrendingUp, LayoutDashboard, Zap, Users, ExternalLink, Code2, Database, Terminal } from 'lucide-react';
+import React from 'react';
+import { Check, Mail, Phone, MapPin, Search, TrendingUp, LayoutDashboard, Zap, Users, ExternalLink, Code2, Database, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // --- Services Page ---
@@ -240,108 +240,39 @@ export const Pricing: React.FC = () => {
 
 // --- Contact Page ---
 export const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`New Inquiry from ${formData.firstName} ${formData.lastName}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}\n` +
-      `Email: ${formData.email}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    window.location.href = `mailto:contact@coresight-data.de?subject=${subject}&body=${body}`;
-  };
-
   return (
     <div className="py-20 max-w-7xl mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-6">Get in Touch</h1>
-          <p className="text-slate-400 mb-8 text-lg">
-            Ready to start your data journey? Fill out the form or reach us directly.
-          </p>
-          
-          <div className="space-y-6">
-            <div className="flex items-center text-slate-300">
-              <Mail className="w-6 h-6 text-brand-500 mr-4" />
-              <a href="mailto:contact@coresight-data.de" className="hover:text-brand-400 transition-colors">contact@coresight-data.de</a>
-            </div>
-            <div className="flex items-center text-slate-300">
-              <Phone className="w-6 h-6 text-brand-500 mr-4" />
-              <span>+49 1638060710</span>
-            </div>
-            <div className="flex items-center text-slate-300">
-              <MapPin className="w-6 h-6 text-brand-500 mr-4" />
-              <span>Kassel, Hessen, Germany</span>
-            </div>
+      <div className="max-w-3xl mx-auto text-center mb-16">
+        <h1 className="text-4xl font-bold text-white mb-6">Get in Touch</h1>
+        <p className="text-slate-400 text-lg">
+          Ready to start your data journey? Reach us directly via email or phone.
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Email */}
+        <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col items-center text-center hover:border-brand-500 transition-colors">
+          <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mb-6 border border-slate-700 text-brand-500 group-hover:scale-110 transition-transform">
+            <Mail size={32} />
           </div>
+          <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+          <p className="text-slate-400 text-sm mb-6">For general inquiries and project quotes.</p>
+          <a href="mailto:contact@coresight-data.de" className="text-brand-400 font-bold hover:text-brand-300 transition-colors text-lg">
+            contact@coresight-data.de
+          </a>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-slate-800 p-8 rounded-xl border border-slate-700">
-          <div className="grid grid-cols-2 gap-6 mb-6">
-            <div>
-              <label className="block text-sm text-slate-400 mb-2">First Name</label>
-              <input 
-                type="text" 
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none" 
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-slate-400 mb-2">Last Name</label>
-              <input 
-                type="text" 
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none" 
-              />
-            </div>
+        {/* Phone */}
+        <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 flex flex-col items-center text-center hover:border-brand-500 transition-colors">
+          <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center mb-6 border border-slate-700 text-brand-500 group-hover:scale-110 transition-transform">
+            <Phone size={32} />
           </div>
-          <div className="mb-6">
-            <label className="block text-sm text-slate-400 mb-2">Email</label>
-            <input 
-              type="email" 
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none" 
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-sm text-slate-400 mb-2">Message</label>
-            <textarea 
-              rows={4} 
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none"
-            ></textarea>
-          </div>
-          <button type="submit" className="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-lg flex items-center justify-center transition-all">
-            Send Message <Send size={18} className="ml-2" />
-          </button>
-        </form>
+          <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
+          <p className="text-slate-400 text-sm mb-6">Mon-Fri from 9am to 6pm CET.</p>
+          <a href="tel:+491638060710" className="text-brand-400 font-bold hover:text-brand-300 transition-colors text-lg">
+            +49 1638060710
+          </a>
+        </div>
       </div>
     </div>
   );
