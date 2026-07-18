@@ -40,15 +40,22 @@ We believe:
 ## 📁 Repository Structure
 
 ```text
-├── components/        # Reusable UI components
-├── pages/             # Application pages
-├── public/
-│   └── assets/        # Images, icons, branding
-├── App.tsx            # Main app component
-├── index.tsx          # Application entry point
-├── index.html         # HTML template
-├── metadata.json      # App metadata
-├── types.ts           # Shared TypeScript types
-├── vite.config.ts     # Vite configuration
-├── tsconfig.json      # TypeScript config
-└── README.md          
+public/
+  assets/          Images (logos, founder photos)
+  _headers         Cloudflare Pages security headers
+  _redirects       SPA fallback so deep links (e.g. /services) work on refresh
+  robots.txt
+  sitemap.xml
+src/
+  components/
+    layout/        Navbar, Footer, PublicLayout (composes the two + Outlet)
+    CookieConsent.tsx
+  data/            Static content as typed data (nav links, services, portfolio,
+                   pricing, team, company contact info) \u2014 edit these files to
+                   change site copy without touching component/layout code
+  hooks/
+    useSeo.ts       Sets per-page <title>, meta description, and canonical URL
+  pages/            One file per route, plus pages/legal/ for the three legal pages
+  App.tsx           Route definitions
+  main.tsx          Entry point
+```     
