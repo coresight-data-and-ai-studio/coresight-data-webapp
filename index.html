@@ -1,70 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>CoreSight Data & AI Studio | Analytics for the Future</title>
+    <meta
+      name="description"
+      content="CoreSight Data & AI Studio delivers data engineering, analytics dashboards, forecasting, and applied AI solutions for businesses of all sizes."
+    />
+    <link rel="canonical" href="https://www.coresight-data.de/" />
+
+    <!-- Open Graph / social sharing (site-wide defaults; this is a client-rendered SPA so
+         per-page previews would require prerendering, which is a possible future upgrade) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CoreSight Data & AI Studio" />
+    <meta property="og:title" content="CoreSight Data & AI Studio | Analytics for the Future" />
+    <meta
+      property="og:description"
+      content="Data engineering, analytics dashboards, forecasting, and applied AI solutions for businesses of all sizes."
+    />
+    <meta property="og:url" content="https://www.coresight-data.de/" />
+    <meta property="og:image" content="https://www.coresight-data.de/assets/coresight-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="icon" type="image/png" href="/assets/logo-icon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: '#eff6ff',
-                100: '#dbeafe',
-                400: '#60a5fa',
-                500: '#3b82f6',
-                600: '#2563eb',
-                700: '#1d4ed8',
-                800: '#1e40af',
-                900: '#1e3a8a',
-                950: '#172554',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CoreSight Data & AI Studio",
+        "url": "https://www.coresight-data.de/",
+        "logo": "https://www.coresight-data.de/assets/logo-icon.png",
+        "email": "contact@coresight-data.de",
+        "telephone": "+49 1638060710",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kassel",
+          "addressRegion": "Hessen",
+          "addressCountry": "DE"
         },
+        "sameAs": [
+          "https://www.linkedin.com/company/coresight-data-ai-studio/",
+          "https://www.instagram.com/coresightdataaistudio"
+        ]
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      body { font-family: 'Inter', sans-serif; }
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #1e293b; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #475569; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #64748b; 
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body class="bg-slate-900 text-white overflow-x-hidden antialiased">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
