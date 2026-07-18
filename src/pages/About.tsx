@@ -133,7 +133,7 @@ export const About: React.FC = () => {
             <p className="mt-4 text-slate-400">The minds behind CoreSight Data & AI Studio.</p>
           </div>
 
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
+          <div className="mx-auto grid max-w-2xl gap-6 md:grid-cols-2">
             {team.map((member) => (
               <div
                 key={member.name}
